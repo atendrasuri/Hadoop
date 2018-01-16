@@ -1,0 +1,27 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Spark Project Examples
+
+
+From: 'an unknown organization'
+  - commons-compiler (http://janino-compiler.github.io/commons-compiler/) org.codehaus.janino:commons-compiler:jar:3.0.8
+    License: New BSD License  (https://raw.githubusercontent.com/janino-compiler/janino/master/LICENSE)
+
+From: 'com.github.scopt' (https://github.com/scopt/scopt)
+  - scopt (https://github.com/scopt/scopt) com.github.scopt:scopt_2.11:jar:3.3.0
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'The Netty Project' (http://netty.io/)
+  - Netty/All-in-One (http://netty.io/netty-all/) io.netty:netty-all:jar:4.1.15.Final
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Netty/Buffer (http://netty.io/netty-buffer/) io.netty:netty-buffer:jar:4.1.15.Final
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Netty/Common (http://netty.io/netty-common/) io.netty:netty-common:jar:4.1.15.Final
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+

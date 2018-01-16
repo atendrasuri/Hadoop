@@ -1,0 +1,42 @@
+package com.sapient;
+
+
+import java.io.IOException;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.broadcast.Broadcast;
+import org.apache.spark.util.LongAccumulator;
+
+
+public class Solution {
+
+	public static void main(String args[])throws Exception
+	{
+
+		SparkConf sparkConf = new SparkConf().setAppName("test").setMaster(
+				"local");
+		JavaSparkContext custs = new JavaSparkContext(sparkConf);
+		JavaRDD<String> rdd = jsc
+				.textFile("C:\\BigData\\custs");
+		JavaRDD<String> txns = jsc
+				.textFile("C:\\BigData\\txns");
+		
+
+		String customerDataPath= "C:\\BigData\\customers.txt";
+
+
+		Map<String, String> customerMap = null;
+		try {
+			customerMap = parseCustomerData(customerDataPath);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		Broadcast<Map<String,String>> broadcastVar = jsc.broadcast(customerMap);
+	}
+}
